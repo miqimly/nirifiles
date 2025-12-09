@@ -1,0 +1,88 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "source": "~/.config/fastfetch/music.txt",
+    "type": "file",
+    "color": {
+      "1": "cyan",
+      "2": "blue",
+    },
+  },
+
+  "display": {
+    "separator": " : ",
+    "color": "white",
+  },
+
+  "modules": [
+    "break",
+    {
+      "type": "os",
+      "key": "  OS       ",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "kernel",
+      "key": "  KRNL     ",
+      "keyColor": "blue",
+    },
+    {
+      "type": "shell",
+      "key": "  SHELL    ",
+      "keyColor": "green",
+    },
+    {
+      "type": "terminal",
+      "key": "  TERM     ",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "cpu",
+      "key": "  CPU      ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "memory",
+      "key": "  MEM      ",
+      "keyColor": "red",
+    },
+    {
+      "type": "disk",
+      "key": "  DISK     ",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "gpu",
+      "key": "  GPU      ",
+      "keyColor": "blue",
+    },
+    {
+      "type": "host",
+      "key": "  HOST     ",
+      "keyColor": "green",
+    },
+    {
+      "type": "uptime",
+      "key": "  LIVE     ",
+      "keyColor": "yellow",
+    },
+    {
+      "type": "command",
+      "key": "  AGE      ",
+      "keyColor": "cyan",
+      "text": "uptime -p | sed 's/up //; s/ day/d/g; s/ hour/h/g; s/ minute/m/g; s/s,//g; s/s$//g'",
+    },
+    {
+      "type": "packages",
+      "key": "  PKGS     ",
+      "keyColor": "magenta",
+    },
+    {
+      "type": "wm",
+      "key": "  WM       ",
+      "keyColor": "red",
+    },
+    "break",
+  ],
+}
