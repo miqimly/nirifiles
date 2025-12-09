@@ -1,0 +1,153 @@
+@import "colors.css";
+
+* {
+    all: unset;
+}
+
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    color: #ebdbb2;
+}
+
+scrollbar {
+    opacity: 0;
+}
+
+.normal-icons {
+    -gtk-icon-size: 18px;
+}
+
+.large-icons {
+    -gtk-icon-size: 36px;
+}
+
+.box-wrapper {
+    background: rgba(40, 40, 40, 0.92);
+    backdrop-filter: blur(40px);
+    padding: 0;
+    border: 2px solid rgba(168, 153, 132, 0.25);
+    border-radius: 16px;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        0 0 0 0.5px rgba(235, 219, 178, 0.1) inset;
+}
+
+.preview-box {
+}
+
+.box {
+}
+
+.search-container {
+    background: transparent;
+    padding: 14px 16px 10px 16px;
+    border-bottom: 1px solid rgba(168, 153, 132, 0.15);
+}
+
+.input {
+    background: rgba(60, 56, 54, 0.6);
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(168, 153, 132, 0.25);
+    transition: all 0.2s ease;
+}
+
+.input placeholder {
+    opacity: 0.4;
+    font-weight: 400;
+}
+
+.input:focus,
+.input:active {
+    background: rgba(60, 56, 54, 0.8);
+    border: 1.5px solid rgba(131, 165, 152, 0.6);
+    box-shadow: 0 0 0 3px rgba(131, 165, 152, 0.2);
+    outline: none;
+}
+
+.content-container {
+    padding: 8px;
+}
+
+.placeholder {
+    opacity: 0.5;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.scroll {
+}
+
+.list {
+}
+
+child,
+child > * {
+    transition: all 0.15s ease;
+}
+
+child:hover .item-box {
+    background: rgba(168, 153, 132, 0.1);
+    border-radius: 8px;
+}
+
+child:selected .item-box {
+    background: rgba(131, 165, 152, 0.25);
+    border-radius: 8px;
+}
+
+child:selected .item-box * {
+    color: #a9b665;
+}
+
+.item-box {
+    padding: 8px 12px;
+    margin: 2px 0;
+    border-radius: 8px;
+    transition: all 0.15s ease;
+}
+
+.item-text-box {
+    all: unset;
+    padding: 0;
+    margin-left: 12px;
+}
+
+.item-text {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+
+.item-subtext {
+    font-size: 14px;
+    opacity: 0.6;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.item-image {
+    margin-right: 0;
+    -gtk-icon-transform: scale(1);
+}
+
+.current {
+    font-style: normal;
+    font-weight: 600;
+}
+
+.keybind-hints {
+    background: rgba(60, 56, 54, 0.4);
+    padding: 12px 16px;
+    margin-top: 0;
+    border-top: 1px solid rgba(168, 153, 132, 0.15);
+    border-radius: 0 0 16px 16px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.preview {
+    border-radius: 12px;
+    overflow: hidden;
+}
