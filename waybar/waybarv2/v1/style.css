@@ -1,0 +1,196 @@
+* {
+    background-color: transparent;
+    color: #cdd6f4;
+    border: none;
+    min-height: 0;
+    font-family: "Jetbrains Mono Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+/* LEFT PILL */
+.modules-left {
+    background-color: rgba(30, 30, 46, 0.85);
+    border-radius: 8px;
+    padding: 0 6px;
+    margin: 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* CENTER PILL */
+.modules-center {
+    background-color: rgba(30, 30, 46, 0.85);
+    border-radius: 8px;
+    padding: 0 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* RIGHT PILL */
+.modules-right {
+    background-color: rgba(30, 30, 46, 0.85);
+    border-radius: 8px;
+    padding: 0 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* APP LAUNCHER */
+#custom-launcher {
+    padding: 0 4px;
+    color: #89b4fa;
+    font-size: 13px;
+    margin-right: 2px;
+}
+
+#custom-launcher:hover {
+    background-color: rgba(137, 180, 250, 0.2);
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* WORKSPACES */
+#workspaces {
+    margin: 0;
+}
+
+#workspaces button {
+    padding: 0 4px;
+    margin: 0;
+    min-width: 14px;
+    color: #6c7086;
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button.active {
+    color: #1e1e2e;
+    background-color: #89b4fa;
+    font-weight: 600;
+}
+
+#workspaces button:hover {
+    background-color: rgba(137, 180, 250, 0.2);
+    color: #89b4fa;
+}
+
+/* WINDOW TITLE */
+#window {
+    padding: 0 6px;
+    margin-left: 2px;
+    color: #89dceb;
+    font-weight: 500;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* CLOCK */
+#clock {
+    padding: 0 2px;
+    font-weight: 600;
+    font-size: 11px;
+    color: #cdd6f4;
+}
+
+#clock:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* SYSTEM TRAY */
+#tray {
+    padding: 0 4px;
+}
+
+#tray > .passive {
+    opacity: 0.6;
+}
+
+#tray > .needs-attention {
+    background-color: rgba(250, 179, 135, 0.3);
+    border-radius: 6px;
+}
+
+/* PULSEAUDIO */
+#pulseaudio {
+    padding: 0 5px;
+    margin: 0 1px;
+}
+
+#pulseaudio:hover {
+    background-color: rgba(137, 180, 250, 0.2);
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#pulseaudio.muted {
+    color: #f38ba8;
+}
+
+/* CPU */
+#cpu {
+    padding: 0 5px;
+    margin: 0 1px;
+}
+
+#cpu:hover {
+    background-color: rgba(137, 180, 250, 0.2);
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* MEMORY */
+#memory {
+    padding: 0 5px;
+    margin: 0 1px;
+}
+
+#memory:hover {
+    background-color: rgba(137, 180, 250, 0.2);
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* POWER BUTTON */
+#custom-power {
+    padding: 0 5px;
+    margin-left: 1px;
+    color: #f38ba8;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#custom-power:hover {
+    background-color: rgba(243, 139, 168, 0.3);
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* TOOLTIPS */
+tooltip {
+    background-color: rgba(30, 30, 46, 0.95);
+    border: 1px solid rgba(137, 180, 250, 0.3);
+    border-radius: 6px;
+    padding: 6px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+tooltip label {
+    color: #cdd6f4;
+    font-size: 10px;
+}
+
+/* Hide workspace 10 completely */
+#workspaces button:nth-child(10) {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 0;
+}
