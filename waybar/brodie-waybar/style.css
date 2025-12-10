@@ -7,13 +7,13 @@
 }
 
 window#waybar {
-    background-color: rgba(20, 20, 20, 0.85);
+    background-color: rgba(10, 10, 10, 0.75);
     color: #ffffff;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 tooltip {
-    background: rgba(20, 20, 20, 0.95);
+    background: rgba(10, 10, 10, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     padding: 6px;
@@ -94,4 +94,59 @@ tooltip label {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
+}
+
+/* Hide workspace 10 completely */
+#workspaces button:nth-child(10) {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 0;
+}
+
+/* Hide workspace 10 completely */
+#workspaces button:nth-child(9) {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 0;
+}
+
+/* Hide workspace 10 completely */
+#workspaces button:nth-child(8) {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 0;
+}
+
+/* Hide workspace 10 completely */
+#workspaces button:nth-child(7) {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 0;
+}
+
+/* Hide workspace 10 completely */
+#workspaces button:nth-child(6) {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 0;
 }
