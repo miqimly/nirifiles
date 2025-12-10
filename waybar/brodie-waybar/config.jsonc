@@ -1,0 +1,51 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 24,
+  "spacing": 0,
+  "modules-left": ["niri/workspaces"],
+  "modules-center": ["niri/window"],
+  "modules-right": ["tray", "cpu", "memory", "pulseaudio", "clock"],
+  "niri/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+  },
+  "niri/window": {
+    "format": "{app_id}",
+    "max-length": 50,
+    "separate-outputs": true,
+  },
+  "cpu": {
+    "format": "󰍛 {usage}%",
+    "interval": 2,
+    "tooltip": true,
+    "tooltip-format": "CPU: {usage}%\nLoad: {load}",
+    "on-click": "ghostty -e btop",
+  },
+  "memory": {
+    "format": "󰘚 {percentage}%",
+    "interval": 2,
+    "tooltip": true,
+    "tooltip-format": "RAM: {used:0.1f}GB/{total:0.1f}GB ({percentage}%)\nSwap: {swapUsed:0.1f}GB/{swapTotal:0.1f}GB",
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰸈 {volume}%",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"],
+    },
+    "on-click": "pavucontrol",
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%\n{desc}",
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 2,
+  },
+  "clock": {
+    "format": "󰥔 {:%H:%M %m/%d}",
+    "interval": 60,
+    "tooltip": true,
+    "tooltip-format": "{:%A, %B %d, %Y\n%H:%M:%S}",
+  },
+}
