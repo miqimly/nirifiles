@@ -1,0 +1,211 @@
+/* Color Definitions */
+@define-color selected-text #7dcfff;
+@define-color text #cfc9c2;
+@define-color base #1a1b26;
+@define-color border #33ccff;
+@define-color foreground #cfc9c2;
+@define-color background #1a1b26;
+@define-color hover-bg rgba(51, 204, 255, 0.1);
+@define-color selected-bg rgba(51, 204, 255, 0.15);
+
+/* Global Reset */
+* {
+    all: unset;
+}
+
+/* Base Typography */
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
+    color: @text;
+}
+
+/* Scrollbar */
+scrollbar {
+    opacity: 0;
+}
+
+/* Icon Sizes */
+.normal-icons {
+    -gtk-icon-size: 16px;
+}
+
+.large-icons {
+    -gtk-icon-size: 32px;
+}
+
+/* Main Wrapper - macOS Style */
+.box-wrapper {
+    background: alpha(#1a1b26, 0.9);
+    padding: 12px;
+    border: 1px solid #33ccff;
+    border-radius: 0;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        0 0 0 1px alpha(#33ccff, 0.1);
+}
+
+.preview-box {
+    border-radius: 0;
+}
+
+.box {
+    border-radius: 0;
+}
+
+/* Search Container */
+.search-container {
+    background: alpha(@base, 0.6);
+    padding: 6px 10px;
+    border-radius: 0;
+    margin-bottom: 8px;
+    border: 1px solid alpha(@border, 0.2);
+}
+
+/* Input Field */
+.input {
+    padding: 6px 10px;
+    background: transparent;
+    border-radius: 0;
+    transition: all 200ms ease;
+    font-size: 16px;
+}
+
+.input placeholder {
+    opacity: 0.5;
+}
+
+.input:focus,
+.input:active {
+    box-shadow: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Content Container */
+.content-container {
+    border-radius: 0;
+}
+
+.placeholder {
+    opacity: 0.5;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Scroll Area */
+.scroll {
+    border-radius: 0;
+}
+
+/* List */
+.list {
+    background: transparent;
+}
+
+/* List Items */
+child,
+child > * {
+    transition: all 150ms ease;
+}
+
+child:hover .item-box {
+    background: rgba(51, 204, 255, 0.08);
+    border-radius: 0;
+    margin: 1px 0;
+    padding: 8px 12px;
+}
+
+child:selected .item-box {
+    background: rgba(51, 204, 255, 0.12);
+    border-radius: 0;
+    margin: 1px 0;
+    padding: 8px 12px;
+}
+
+child:selected .item-box * {
+    color: #7dcfff;
+}
+
+/* Item Box */
+.item-box {
+    padding: 8px 12px;
+    margin: 1px 0;
+    transition: all 150ms ease;
+}
+
+.item-text-box {
+    all: unset;
+    padding: 4px 0;
+}
+
+/* Item Text */
+.item-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Item Subtext - App Descriptions */
+.item-subtext {
+    font-size: 13px;
+    opacity: 0.5;
+    margin-top: 2px;
+    font-weight: 400;
+}
+
+/* Item Image/Icon */
+.item-image {
+    margin-right: 10px;
+    -gtk-icon-transform: scale(0.85);
+    opacity: 0.9;
+}
+
+child:selected .item-image {
+    opacity: 1;
+}
+
+/* Current Item Indicator */
+.current {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Keybind Hints */
+.keybind-hints {
+    background: alpha(@background, 0.9);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 0;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Preview */
+.preview {
+    border-radius: 0;
+    padding: 10px;
+    background: alpha(@base, 0.5);
+}
+
+/* Additional macOS-style Elements */
+separator {
+    background: alpha(@border, 0.2);
+    min-height: 1px;
+    margin: 8px 0;
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box-wrapper {
+    animation: fadeIn 200ms ease;
+}
